@@ -1,7 +1,7 @@
 <?php
     include 'configuration.php';
 
-    $sqlGetData = 'SELECT id, Prenom, Nom, Age  FROM persone';
+    $sqlGetData = 'SELECT id, prénom, nom, age  FROM person';
     $result = mysqli_query($connect ,$sqlGetData);
     $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -27,9 +27,9 @@
             ?>
 
             <tr>
-                <td><?= $value['Prenom']?></td>
-                <td><?= $value['Nom']?></td>
-                <td><?= $value['Age']?></td>
+                <td><?= $value['prénom']?></td>
+                <td><?= $value['nom']?></td>
+                <td><?= $value['age']?></td>
           
                 <td>
                     <a href="edit.php?id=<?php echo $value['id'] ?>">Edit</a>

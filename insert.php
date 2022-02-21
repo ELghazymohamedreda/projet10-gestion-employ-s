@@ -7,7 +7,7 @@
         $Age = $_POST['Age'];
 
         // sql insert query
-        $sqlInsert= "INSERT INTO persone(Prenom,Nom, Age) 
+        $sqlInsert= "INSERT INTO person(prénom,nom, age) 
                                 VALUES('$Prenom', '$Nom', '$Age')";
         
         mysqli_query($connect, $sqlInsert);
