@@ -1,12 +1,12 @@
 <?php  
-include 'config.php';
+include 'configuration.php';
 
     if(isset($_GET['id'])){
         $id = $_GET['id'];
        
         $Select = "SELECT * FROM person WHERE id=$id";
         // get result
-        $result = mysqli_query($conn, $Select);
+        $result = mysqli_query($connect, $Select);
 
          // fetch to array
         $person = mysqli_fetch_assoc($result);
@@ -22,7 +22,7 @@ include 'config.php';
         $update ="UPDATE person SET 
         prénom='$prenom',nom='$nom',age='$age'";
 
-        mysqli_query($conn, $update);
+        mysqli_query($connect, $update);
         header('location: index.php');
         
     };
@@ -36,7 +36,7 @@ include 'config.php';
     <input type="text"  value="<?= $person['nom'] ?>"name="Nom">
      </div>
     <div>	
-        <input type="number" value="<?= $person['age'] ?>" name="Age">
+        <input type="text" value="<?= $person['age'] ?>" name="Age">
     </div>
 	<div>
         <button type='submit'>Modifier</button>
