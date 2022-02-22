@@ -3,4 +3,4 @@
    $employe = NewEmployee();
    $employe -> setFirstnom("REDA");
    echo $employe -> getFirstnome();
-?> 
+?>    
