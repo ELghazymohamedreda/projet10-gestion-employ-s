@@ -40,4 +40,4 @@ $data = json_decode($ajouterFicher);
 <?php } ?>
  </table>
 </body>
-</html>
+</html> 
